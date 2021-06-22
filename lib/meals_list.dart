@@ -1,8 +1,6 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_fitness/exercice_page1.dart';
-import 'package:http/http.dart' as http;
-import 'exercice_page1.dart';
+import 'package:flutter_app_fitness/meals1.dart';
+import 'package:flutter_app_fitness/meals2.dart';
 
 class MealsList extends StatefulWidget {
   var row;
@@ -47,7 +45,8 @@ class _MealsListState extends State<MealsList> {
                   ),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed(ExercicePage1.tag);
+                      Navigator.of(context)
+                          .pushNamed(index == 1 ? Meal2.tag : Meal1.tag);
                     },
                     child: Card(
                       color: Colors.teal[100],
@@ -98,7 +97,8 @@ class _MealsListState extends State<MealsList> {
                   top: 50,
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushNamed(ExercicePage1.tag);
+                      Navigator.of(context)
+                          .pushNamed(index == 1 ? Meal2.tag : Meal1.tag);
                     },
                     child: reverse ? salmonImage : bowlImage,
                   ),

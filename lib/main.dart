@@ -5,6 +5,8 @@ import 'categories.dart';
 import 'fitness_list.dart';
 import 'exercice_page1.dart';
 import 'exercice_page2.dart';
+import 'meals1.dart';
+import 'meals2.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,6 +29,8 @@ class MyApp extends StatelessWidget {
       routes: {
         ExercicePage1.tag: (_) => ExercicePage1(),
         ExercicePage2.tag: (_) => ExercicePage2(),
+        Meal1.tag: (_) => Meal1(),
+        Meal2.tag: (_) => Meal2(),
       },
     );
   }
